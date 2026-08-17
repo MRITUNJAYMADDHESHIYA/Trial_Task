@@ -8,7 +8,7 @@ df["Date-Time"] = pd.to_datetime(df["Date-Time"], errors="coerce")
 
 finding = []
 
-############ Missing data #####################
+####################### Missing data #####################
 missing_dates = df["Date-Time"].isna()
 missing_open  = df["Open"].isna()
 missing_high  = df["High"].isna()
@@ -34,3 +34,15 @@ print(len(missing_low_ad))
 print(len(missing_last_ad))
 print(len(missing_volume))
 print(len(missing_volume_ad))
+
+
+
+
+
+
+
+######################### high>= O/C/L and low <= O/C/H ##################
+bad_rows = df[
+    (df["High"] < df[["Open", "Low", "Last"]].max(axis=1)) |
+    (df["Low"] > df[["Open", "High", "Last"]].min(axis=1))
+]
