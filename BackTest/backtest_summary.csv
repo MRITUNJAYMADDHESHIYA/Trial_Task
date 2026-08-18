@@ -1,0 +1,12 @@
+,0
+n_trades,43.0
+strat_mean_trade_return,0.0023351793060552343
+strat_win_rate,0.5348837209302325
+strat_total_return,0.06115286065664072
+strat_final_equity,1.0611528606566407
+control_total_return_mean,-0.10934801416308176
+control_total_return_std,0.29355805830112414
+control_mean_trade_return_mean,-0.002609213754653505
+control_mean_trade_return_std,0.007497383528108185
+p_value_total_return,0.227
+p_value_mean_trade_return,0.241
